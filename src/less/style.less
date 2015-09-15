@@ -95,6 +95,9 @@
 			}
 		}
 		.timing(@filter);
+		&.insta-unhover:hover {
+			.filter-maker(~"@{filter}(@{none})");
+		}
 	}
 }
 

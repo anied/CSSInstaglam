@@ -117,3 +117,10 @@
   -ms-transition: -ms-filter 4s, filter 4s;
   transition: filter 4s, -moz-filter 4s, -o-filter 4s, -ms-filter 4s, -webkit-filter 4s;
 }
+.insta-blur.insta-unhover:hover {
+  -moz-filter: blur(0);
+  -webkit-filter: blur(0);
+  -o-filter: blur(0);
+  -ms-filter: blur(0);
+  filter: blur(0);
+}
