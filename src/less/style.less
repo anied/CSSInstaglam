@@ -40,17 +40,33 @@
 @medium-px: 3px;
 @large-px: 6px;
 @mega-px: 12px;
+
 @small-percentage: 10;
 @medium-percentage: 40%;
 @large-percentage: 80%;
 @mega-percentage: 100%;
 
+@reallyfast: 0.5s;
+@fast: 1s;
+@slow: 2.5s;
+@lazy: 4s;
+
 .filter-maker(@filter) {
+	 /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+	filter: @filter;
 	-moz-filter: @filter;
 	-webkit-filter: @filter;
 	-o-filter: @filter;
 	-ms-filter: @filter;
-	filter: @filter;
+}
+
+.timing-maker(@timing) {
+	 /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+	transition: ~"filter @{timing}";
+	-moz-transition: ~"-moz-filter @{timing}";
+	-webkit-transition: ~"-webkit-filter @{timing}";
+	-o-transition: ~"-o-filter @{timing}";
+	-ms-transition: ~"-ms-filter @{timing}";
 }
 
 .percentage-sizes(@filter) {
@@ -60,6 +76,15 @@
 	&.insta-large {.filter-maker(~"@{filter}(@{large-px})");}
 	&.insta-mega {.filter-maker(~"@{filter}(@{mega-px})");}
 }
+
+.timing(@filter) {
+	&.insta-reallyfast {.timing-maker(@reallyfast);}
+	&.insta-fast {.timing-maker(@fast);}
+	&.insta-slow {.timing-maker(@slow);}
+	&.insta-lazy {.timing-maker(@lazy);}
+}
+
+
 
 .insta-blur {
 	.filter-maker(blur(@medium-px));
@@ -71,6 +96,7 @@
 			.percentage-sizes(blur);
 		}
 	}
+	.timing(blur);
 }
 
 // .insta-blur {

@@ -1,91 +1,136 @@
 .insta-blur {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  filter: blur(3px);
   -moz-filter: blur(3px);
   -webkit-filter: blur(3px);
   -o-filter: blur(3px);
   -ms-filter: blur(3px);
-  filter: blur(3px);
 }
 .insta-blur.insta-none {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  filter: blur(0);
   -moz-filter: blur(0);
   -webkit-filter: blur(0);
   -o-filter: blur(0);
   -ms-filter: blur(0);
-  filter: blur(0);
 }
 .insta-blur.insta-small {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  filter: blur(1px);
   -moz-filter: blur(1px);
   -webkit-filter: blur(1px);
   -o-filter: blur(1px);
   -ms-filter: blur(1px);
-  filter: blur(1px);
 }
 .insta-blur.insta-medium {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  filter: blur(3px);
   -moz-filter: blur(3px);
   -webkit-filter: blur(3px);
   -o-filter: blur(3px);
   -ms-filter: blur(3px);
-  filter: blur(3px);
 }
 .insta-blur.insta-large {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  filter: blur(6px);
   -moz-filter: blur(6px);
   -webkit-filter: blur(6px);
   -o-filter: blur(6px);
   -ms-filter: blur(6px);
-  filter: blur(6px);
 }
 .insta-blur.insta-mega {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  filter: blur(12px);
   -moz-filter: blur(12px);
   -webkit-filter: blur(12px);
   -o-filter: blur(12px);
   -ms-filter: blur(12px);
-  filter: blur(12px);
 }
 .insta-blur.insta-hover {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  filter: blur(0);
   -moz-filter: blur(0);
   -webkit-filter: blur(0);
   -o-filter: blur(0);
   -ms-filter: blur(0);
-  filter: blur(0);
 }
 .insta-blur.insta-hover:hover {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  filter: blur(3px);
   -moz-filter: blur(3px);
   -webkit-filter: blur(3px);
   -o-filter: blur(3px);
   -ms-filter: blur(3px);
-  filter: blur(3px);
 }
 .insta-blur.insta-hover:hover.insta-none {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  filter: blur(0);
   -moz-filter: blur(0);
   -webkit-filter: blur(0);
   -o-filter: blur(0);
   -ms-filter: blur(0);
-  filter: blur(0);
 }
 .insta-blur.insta-hover:hover.insta-small {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  filter: blur(1px);
   -moz-filter: blur(1px);
   -webkit-filter: blur(1px);
   -o-filter: blur(1px);
   -ms-filter: blur(1px);
-  filter: blur(1px);
 }
 .insta-blur.insta-hover:hover.insta-medium {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  filter: blur(3px);
   -moz-filter: blur(3px);
   -webkit-filter: blur(3px);
   -o-filter: blur(3px);
   -ms-filter: blur(3px);
-  filter: blur(3px);
 }
 .insta-blur.insta-hover:hover.insta-large {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  filter: blur(6px);
   -moz-filter: blur(6px);
   -webkit-filter: blur(6px);
   -o-filter: blur(6px);
   -ms-filter: blur(6px);
-  filter: blur(6px);
 }
 .insta-blur.insta-hover:hover.insta-mega {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  filter: blur(12px);
   -moz-filter: blur(12px);
   -webkit-filter: blur(12px);
   -o-filter: blur(12px);
   -ms-filter: blur(12px);
-  filter: blur(12px);
+}
+.insta-blur.insta-reallyfast {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  transition: filter 0.5s;
+  -moz-transition: -moz-filter 0.5s;
+  -webkit-transition: -webkit-filter 0.5s;
+  -o-transition: -o-filter 0.5s;
+  -ms-transition: -ms-filter 0.5s;
+}
+.insta-blur.insta-fast {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  transition: filter 1s;
+  -moz-transition: -moz-filter 1s;
+  -webkit-transition: -webkit-filter 1s;
+  -o-transition: -o-filter 1s;
+  -ms-transition: -ms-filter 1s;
+}
+.insta-blur.insta-slow {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  transition: filter 2.5s;
+  -moz-transition: -moz-filter 2.5s;
+  -webkit-transition: -webkit-filter 2.5s;
+  -o-transition: -o-filter 2.5s;
+  -ms-transition: -ms-filter 2.5s;
+}
+.insta-blur.insta-lazy {
+  /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
+  transition: filter 4s;
+  -moz-transition: -moz-filter 4s;
+  -webkit-transition: -webkit-filter 4s;
+  -o-transition: -o-filter 4s;
+  -ms-transition: -ms-filter 4s;
 }
