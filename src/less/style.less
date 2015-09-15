@@ -52,21 +52,19 @@
 @lazy: 4s;
 
 .filter-maker(@filter) {
-	 /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
-	filter: @filter;
 	-moz-filter: @filter;
 	-webkit-filter: @filter;
 	-o-filter: @filter;
 	-ms-filter: @filter;
+	filter: @filter;
 }
 
 .timing-maker(@timing) {
-	 /*Unprefixed property has to live on top to account for scenarios in which only one of the properties (filter and transition) is unprefixed (looking at you, Chrome...) */
-	transition: ~"filter @{timing}";
-	-moz-transition: ~"-moz-filter @{timing}";
-	-webkit-transition: ~"-webkit-filter @{timing}";
-	-o-transition: ~"-o-filter @{timing}";
-	-ms-transition: ~"-ms-filter @{timing}";
+	-moz-transition: ~"-moz-filter @{timing}, filter @{timing}";
+	-webkit-transition: ~"-webkit-filter @{timing}, filter @{timing}";
+	-o-transition: ~"-o-filter @{timing}, filter @{timing}";
+	-ms-transition: ~"-ms-filter @{timing}, filter @{timing}";
+	transition: ~"filter @{timing}, -moz-filter @{timing}, -o-filter @{timing}, -ms-filter @{timing}, -webkit-filter @{timing}";
 }
 
 .percentage-sizes(@filter) {
@@ -85,19 +83,36 @@
 }
 
 
-
-.insta-blur {
-	.filter-maker(blur(@medium-px));
-	.percentage-sizes(blur);
-	&.insta-hover {
-		.filter-maker(blur(@none));
-		&:hover {
-			.filter-maker(blur(@medium-px));
-			.percentage-sizes(blur);
+.basic-property-builder(@filter, @property-name) {
+	.insta-@{property-name} {
+		.filter-maker(~"@{filter}(@{medium-px})");
+		.percentage-sizes(@filter);
+		&.insta-hover {
+			.filter-maker(~"@{filter}(@{none})");
+			&:hover {
+				.filter-maker(~"@{filter}(@{medium-px})");
+				.percentage-sizes(@filter);
+			}
 		}
+		.timing(@filter);
 	}
-	.timing(blur);
 }
+
+
+.basic-property-builder(blur, blur);
+
+// .insta-blur {
+// 	.filter-maker(blur(@medium-px));
+// 	.percentage-sizes(blur);
+// 	&.insta-hover {
+// 		.filter-maker(blur(@none));
+// 		&:hover {
+// 			.filter-maker(blur(@medium-px));
+// 			.percentage-sizes(blur);
+// 		}
+// 	}
+// 	.timing(blur);
+// }
 
 // .insta-blur {
 // 	-webkit-filter: blur(@medium-px);
