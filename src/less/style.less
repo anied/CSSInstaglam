@@ -1,0 +1,92 @@
+
+// **************** //
+
+// .insta-blur
+// .insta-brighten
+// .insta-darken
+// .insta-contrast
+// .insta-grayscale
+// .insta-invert
+// .insta-opacity
+// .insta-saturate
+// .insta-sepia
+
+// .insta-shadow
+// .insta-hue
+
+// .insta-bw
+
+
+// .insta-none
+// .insta-small
+// .insta-medium
+// .insta-large
+// .insta-mega
+
+
+// .insta-reallyfast
+// .insta-fast
+// .insta-slow
+// .insta-lazy
+
+// .insta-hover
+
+
+// **************** //
+
+@none: 0;
+
+@small-px: 1px;
+@medium-px: 3px;
+@large-px: 6px;
+@mega-px: 12px;
+@small-percentage: 10;
+@medium-percentage: 40%;
+@large-percentage: 80%;
+@mega-percentage: 100%;
+
+.filter-maker(@filter) {
+	-moz-filter: @filter;
+	-webkit-filter: @filter;
+	-o-filter: @filter;
+	-ms-filter: @filter;
+	filter: @filter;
+}
+
+.percentage-sizes(@filter) {
+	&.insta-none {.filter-maker(~"@{filter}(@{none})");}
+	&.insta-small {.filter-maker(~"@{filter}(@{small-px})");}
+	&.insta-medium {.filter-maker(~"@{filter}(@{medium-px})");}
+	&.insta-large {.filter-maker(~"@{filter}(@{large-px})");}
+	&.insta-mega {.filter-maker(~"@{filter}(@{mega-px})");}
+}
+
+.insta-blur {
+	.filter-maker(blur(@medium-px));
+	.percentage-sizes(blur);
+	&.insta-hover {
+		.filter-maker(blur(@none));
+		&:hover {
+			.filter-maker(blur(@medium-px));
+			.percentage-sizes(blur);
+		}
+	}
+}
+
+// .insta-blur {
+// 	-webkit-filter: blur(@medium-px);
+// 	filter: blur(@medium-px);
+// }
+
+// .insta-brighten {
+// 	-webkit-filter: brightness(100+@medium-percentage);
+// 	filter: brightness(100+@medium-percentage);
+// }
+
+
+
+// .insta-blur {
+// 	-webkit-filter: blur(@medium-px);
+// 	filter: blur(@medium-px);
+
+// }

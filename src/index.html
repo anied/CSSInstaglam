@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSSInstaglam</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!--<script src="js/script.js"></script>-->
+	<style>
+		.mini-title {
+			font-weight: bold;
+		}
+		.example-row {
+			border-top: 1px dotted #DDD;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.example-row:first-of-type {
+			border-top: none;
+		}
+		.example-img {
+			 vertical-align: middle;
+		}
+	</style>
+</head>
+<body>
+	<!-- p.example-row>(span.mini-title{mytitle}+{&nbsp;&nbsp;}+span.insta-{<img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/>}) -->
+	<h1>CSSInstaGlam Test Sheet</h1>
+	<h2>Basics:</h2>
+	<p class="example-row">
+		<span class="mini-title">Basic Blur:</span>&nbsp;&nbsp;<span class="insta-blur"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
+	</p>
+<!-- 	<p class="example-row">
+		<span class="mini-title">Basic Brightness:</span>&nbsp;&nbsp;<span class="insta-brighten"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
+	</p> -->
+	<p class="example-row">
+		<span class="mini-title">Mega Blur:</span>&nbsp;&nbsp;<span class="insta-blur insta-mega"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
+	</p>
+	<p class="example-row">
+		<span class="mini-title">No Blur:</span>&nbsp;&nbsp;<span class="insta-blur insta-none"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
+	</p>
+	<p class="example-row">
+		<span class="mini-title">Blur on Hover:</span>&nbsp;&nbsp;<span class="insta-blur insta-hover"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
+	</p>
+	<p class="example-row">
+		<span class="mini-title">Blur Mega on Hover:</span>&nbsp;&nbsp;<span class="insta-blur insta-hover insta-mega"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
+	</p>
+	<p class="example-row">
+		<span class="mini-title">Blur on Hover Slow:</span>&nbsp;&nbsp;<span class="insta-"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
+	</p>
+	<p class="example-row">
+		<span class="mini-title">Blur on Hover Fast</span>&nbsp;&nbsp;<span class="insta-"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
+	</p>
+</body>
+</html>
