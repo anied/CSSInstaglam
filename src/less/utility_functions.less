@@ -1,0 +1,46 @@
+.filter-maker(@filter) {
+	-moz-filter: @filter;
+	-webkit-filter: @filter;
+	-o-filter: @filter;
+	-ms-filter: @filter;
+	filter: @filter;
+}
+
+.transition-maker(@timing) {
+	-moz-transition: ~"-moz-filter @{timing}, filter @{timing}";
+	-webkit-transition: ~"-webkit-filter @{timing}, filter @{timing}";
+	-o-transition: ~"-o-filter @{timing}, filter @{timing}";
+	-ms-transition: ~"-ms-filter @{timing}, filter @{timing}";
+	transition: ~"filter @{timing}, -moz-filter @{timing}, -o-filter @{timing}, -ms-filter @{timing}, -webkit-filter @{timing}";
+}
+
+.generate-sizing-rules(@filter, @unit, @type-flag: none) when (@type-flag = none) {
+	&.insta-none {.filter-maker(~"@{filter}(@{none})");}
+	&.insta-small {.filter-maker(~"@{filter}(@{small-@{unit}})");}
+	&.insta-medium {.filter-maker(~"@{filter}(@{medium-@{unit}})");}
+	&.insta-large {.filter-maker(~"@{filter}(@{large-@{unit}})");}
+	&.insta-mega {.filter-maker(~"@{filter}(@{mega-@{unit}})");}
+}
+
+.generate-sizing-rules(@filter, @unit, @type-flag: none) when (@type-flag = additive) {
+	&.insta-none {.filter-maker(~"@{filter}(@{none})");}
+	&.insta-small {.filter-maker(~"@{filter}(@{add-small-@{unit}})");}
+	&.insta-medium {.filter-maker(~"@{filter}(@{add-medium-@{unit}})");}
+	&.insta-large {.filter-maker(~"@{filter}(@{add-large-@{unit}})");}
+	&.insta-mega {.filter-maker(~"@{filter}(@{add-mega-@{unit}})");}
+}
+
+.generate-sizing-rules(@filter, @unit, @type-flag: none) when (@type-flag = subtractive) {
+	&.insta-none {.filter-maker(~"@{filter}(@{none})");}
+	&.insta-small {.filter-maker(~"@{filter}(@{sub-small-@{unit}})");}
+	&.insta-medium {.filter-maker(~"@{filter}(@{sub-medium-@{unit}})");}
+	&.insta-large {.filter-maker(~"@{filter}(@{sub-large-@{unit}})");}
+	&.insta-mega {.filter-maker(~"@{filter}(@{sub-mega-@{unit}})");}
+}
+
+.generate-timing-rules(@filter) {
+	&.insta-reallyfast {.transition-maker(@reallyfast);}
+	&.insta-fast {.transition-maker(@fast);}
+	&.insta-slow {.transition-maker(@slow);}
+	&.insta-lazy {.transition-maker(@lazy);}
+}

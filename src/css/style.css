@@ -124,3 +124,255 @@
   -ms-filter: blur(0);
   filter: blur(0);
 }
+.insta-brighten {
+  -moz-filter: brightness(140%);
+  -webkit-filter: brightness(140%);
+  -o-filter: brightness(140%);
+  -ms-filter: brightness(140%);
+  filter: brightness(140%);
+}
+.insta-brighten.insta-none {
+  -moz-filter: brightness(0);
+  -webkit-filter: brightness(0);
+  -o-filter: brightness(0);
+  -ms-filter: brightness(0);
+  filter: brightness(0);
+}
+.insta-brighten.insta-small {
+  -moz-filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+  -o-filter: brightness(110%);
+  -ms-filter: brightness(110%);
+  filter: brightness(110%);
+}
+.insta-brighten.insta-medium {
+  -moz-filter: brightness(140%);
+  -webkit-filter: brightness(140%);
+  -o-filter: brightness(140%);
+  -ms-filter: brightness(140%);
+  filter: brightness(140%);
+}
+.insta-brighten.insta-large {
+  -moz-filter: brightness(180%);
+  -webkit-filter: brightness(180%);
+  -o-filter: brightness(180%);
+  -ms-filter: brightness(180%);
+  filter: brightness(180%);
+}
+.insta-brighten.insta-mega {
+  -moz-filter: brightness(200%);
+  -webkit-filter: brightness(200%);
+  -o-filter: brightness(200%);
+  -ms-filter: brightness(200%);
+  filter: brightness(200%);
+}
+.insta-brighten.insta-hover {
+  -moz-filter: brightness(0);
+  -webkit-filter: brightness(0);
+  -o-filter: brightness(0);
+  -ms-filter: brightness(0);
+  filter: brightness(0);
+}
+.insta-brighten.insta-hover:hover {
+  -moz-filter: brightness(140%);
+  -webkit-filter: brightness(140%);
+  -o-filter: brightness(140%);
+  -ms-filter: brightness(140%);
+  filter: brightness(140%);
+}
+.insta-brighten.insta-hover:hover.insta-none {
+  -moz-filter: brightness(0);
+  -webkit-filter: brightness(0);
+  -o-filter: brightness(0);
+  -ms-filter: brightness(0);
+  filter: brightness(0);
+}
+.insta-brighten.insta-hover:hover.insta-small {
+  -moz-filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+  -o-filter: brightness(110%);
+  -ms-filter: brightness(110%);
+  filter: brightness(110%);
+}
+.insta-brighten.insta-hover:hover.insta-medium {
+  -moz-filter: brightness(140%);
+  -webkit-filter: brightness(140%);
+  -o-filter: brightness(140%);
+  -ms-filter: brightness(140%);
+  filter: brightness(140%);
+}
+.insta-brighten.insta-hover:hover.insta-large {
+  -moz-filter: brightness(180%);
+  -webkit-filter: brightness(180%);
+  -o-filter: brightness(180%);
+  -ms-filter: brightness(180%);
+  filter: brightness(180%);
+}
+.insta-brighten.insta-hover:hover.insta-mega {
+  -moz-filter: brightness(200%);
+  -webkit-filter: brightness(200%);
+  -o-filter: brightness(200%);
+  -ms-filter: brightness(200%);
+  filter: brightness(200%);
+}
+.insta-brighten.insta-reallyfast {
+  -moz-transition: -moz-filter 0.5s, filter 0.5s;
+  -webkit-transition: -webkit-filter 0.5s, filter 0.5s;
+  -o-transition: -o-filter 0.5s, filter 0.5s;
+  -ms-transition: -ms-filter 0.5s, filter 0.5s;
+  transition: filter 0.5s, -moz-filter 0.5s, -o-filter 0.5s, -ms-filter 0.5s, -webkit-filter 0.5s;
+}
+.insta-brighten.insta-fast {
+  -moz-transition: -moz-filter 1s, filter 1s;
+  -webkit-transition: -webkit-filter 1s, filter 1s;
+  -o-transition: -o-filter 1s, filter 1s;
+  -ms-transition: -ms-filter 1s, filter 1s;
+  transition: filter 1s, -moz-filter 1s, -o-filter 1s, -ms-filter 1s, -webkit-filter 1s;
+}
+.insta-brighten.insta-slow {
+  -moz-transition: -moz-filter 2.5s, filter 2.5s;
+  -webkit-transition: -webkit-filter 2.5s, filter 2.5s;
+  -o-transition: -o-filter 2.5s, filter 2.5s;
+  -ms-transition: -ms-filter 2.5s, filter 2.5s;
+  transition: filter 2.5s, -moz-filter 2.5s, -o-filter 2.5s, -ms-filter 2.5s, -webkit-filter 2.5s;
+}
+.insta-brighten.insta-lazy {
+  -moz-transition: -moz-filter 4s, filter 4s;
+  -webkit-transition: -webkit-filter 4s, filter 4s;
+  -o-transition: -o-filter 4s, filter 4s;
+  -ms-transition: -ms-filter 4s, filter 4s;
+  transition: filter 4s, -moz-filter 4s, -o-filter 4s, -ms-filter 4s, -webkit-filter 4s;
+}
+.insta-brighten.insta-unhover:hover {
+  -moz-filter: brightness(0);
+  -webkit-filter: brightness(0);
+  -o-filter: brightness(0);
+  -ms-filter: brightness(0);
+  filter: brightness(0);
+}
+.insta-darken {
+  -moz-filter: brightness(60%);
+  -webkit-filter: brightness(60%);
+  -o-filter: brightness(60%);
+  -ms-filter: brightness(60%);
+  filter: brightness(60%);
+}
+.insta-darken.insta-none {
+  -moz-filter: brightness(0);
+  -webkit-filter: brightness(0);
+  -o-filter: brightness(0);
+  -ms-filter: brightness(0);
+  filter: brightness(0);
+}
+.insta-darken.insta-small {
+  -moz-filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+  -o-filter: brightness(90%);
+  -ms-filter: brightness(90%);
+  filter: brightness(90%);
+}
+.insta-darken.insta-medium {
+  -moz-filter: brightness(60%);
+  -webkit-filter: brightness(60%);
+  -o-filter: brightness(60%);
+  -ms-filter: brightness(60%);
+  filter: brightness(60%);
+}
+.insta-darken.insta-large {
+  -moz-filter: brightness(20%);
+  -webkit-filter: brightness(20%);
+  -o-filter: brightness(20%);
+  -ms-filter: brightness(20%);
+  filter: brightness(20%);
+}
+.insta-darken.insta-mega {
+  -moz-filter: brightness(0%);
+  -webkit-filter: brightness(0%);
+  -o-filter: brightness(0%);
+  -ms-filter: brightness(0%);
+  filter: brightness(0%);
+}
+.insta-darken.insta-hover {
+  -moz-filter: brightness(0);
+  -webkit-filter: brightness(0);
+  -o-filter: brightness(0);
+  -ms-filter: brightness(0);
+  filter: brightness(0);
+}
+.insta-darken.insta-hover:hover {
+  -moz-filter: brightness(60%);
+  -webkit-filter: brightness(60%);
+  -o-filter: brightness(60%);
+  -ms-filter: brightness(60%);
+  filter: brightness(60%);
+}
+.insta-darken.insta-hover:hover.insta-none {
+  -moz-filter: brightness(0);
+  -webkit-filter: brightness(0);
+  -o-filter: brightness(0);
+  -ms-filter: brightness(0);
+  filter: brightness(0);
+}
+.insta-darken.insta-hover:hover.insta-small {
+  -moz-filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+  -o-filter: brightness(90%);
+  -ms-filter: brightness(90%);
+  filter: brightness(90%);
+}
+.insta-darken.insta-hover:hover.insta-medium {
+  -moz-filter: brightness(60%);
+  -webkit-filter: brightness(60%);
+  -o-filter: brightness(60%);
+  -ms-filter: brightness(60%);
+  filter: brightness(60%);
+}
+.insta-darken.insta-hover:hover.insta-large {
+  -moz-filter: brightness(20%);
+  -webkit-filter: brightness(20%);
+  -o-filter: brightness(20%);
+  -ms-filter: brightness(20%);
+  filter: brightness(20%);
+}
+.insta-darken.insta-hover:hover.insta-mega {
+  -moz-filter: brightness(0%);
+  -webkit-filter: brightness(0%);
+  -o-filter: brightness(0%);
+  -ms-filter: brightness(0%);
+  filter: brightness(0%);
+}
+.insta-darken.insta-reallyfast {
+  -moz-transition: -moz-filter 0.5s, filter 0.5s;
+  -webkit-transition: -webkit-filter 0.5s, filter 0.5s;
+  -o-transition: -o-filter 0.5s, filter 0.5s;
+  -ms-transition: -ms-filter 0.5s, filter 0.5s;
+  transition: filter 0.5s, -moz-filter 0.5s, -o-filter 0.5s, -ms-filter 0.5s, -webkit-filter 0.5s;
+}
+.insta-darken.insta-fast {
+  -moz-transition: -moz-filter 1s, filter 1s;
+  -webkit-transition: -webkit-filter 1s, filter 1s;
+  -o-transition: -o-filter 1s, filter 1s;
+  -ms-transition: -ms-filter 1s, filter 1s;
+  transition: filter 1s, -moz-filter 1s, -o-filter 1s, -ms-filter 1s, -webkit-filter 1s;
+}
+.insta-darken.insta-slow {
+  -moz-transition: -moz-filter 2.5s, filter 2.5s;
+  -webkit-transition: -webkit-filter 2.5s, filter 2.5s;
+  -o-transition: -o-filter 2.5s, filter 2.5s;
+  -ms-transition: -ms-filter 2.5s, filter 2.5s;
+  transition: filter 2.5s, -moz-filter 2.5s, -o-filter 2.5s, -ms-filter 2.5s, -webkit-filter 2.5s;
+}
+.insta-darken.insta-lazy {
+  -moz-transition: -moz-filter 4s, filter 4s;
+  -webkit-transition: -webkit-filter 4s, filter 4s;
+  -o-transition: -o-filter 4s, filter 4s;
+  -ms-transition: -ms-filter 4s, filter 4s;
+  transition: filter 4s, -moz-filter 4s, -o-filter 4s, -ms-filter 4s, -webkit-filter 4s;
+}
+.insta-darken.insta-unhover:hover {
+  -moz-filter: brightness(0);
+  -webkit-filter: brightness(0);
+  -o-filter: brightness(0);
+  -ms-filter: brightness(0);
+  filter: brightness(0);
+}

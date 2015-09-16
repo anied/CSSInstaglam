@@ -1,136 +1,57 @@
-
-// **************** //
-
-// .insta-blur
-// .insta-brighten
-// .insta-darken
-// .insta-contrast
-// .insta-grayscale
-// .insta-invert
-// .insta-opacity
-// .insta-saturate
-// .insta-sepia
-
-// .insta-shadow
-// .insta-hue
-
-// .insta-bw
+@import url('constants.less');
+@import url('utility_functions.less');
 
 
-// .insta-none
-// .insta-small
-// .insta-medium
-// .insta-large
-// .insta-mega
-
-
-// .insta-reallyfast
-// .insta-fast
-// .insta-slow
-// .insta-lazy
-
-// .insta-hover
-
-
-// **************** //
-
-@none: 0;
-
-@small-px: 1px;
-@medium-px: 3px;
-@large-px: 6px;
-@mega-px: 12px;
-
-@small-percentage: 10;
-@medium-percentage: 40%;
-@large-percentage: 80%;
-@mega-percentage: 100%;
-
-@reallyfast: 0.5s;
-@fast: 1s;
-@slow: 2.5s;
-@lazy: 4s;
-
-.filter-maker(@filter) {
-	-moz-filter: @filter;
-	-webkit-filter: @filter;
-	-o-filter: @filter;
-	-ms-filter: @filter;
-	filter: @filter;
-}
-
-.timing-maker(@timing) {
-	-moz-transition: ~"-moz-filter @{timing}, filter @{timing}";
-	-webkit-transition: ~"-webkit-filter @{timing}, filter @{timing}";
-	-o-transition: ~"-o-filter @{timing}, filter @{timing}";
-	-ms-transition: ~"-ms-filter @{timing}, filter @{timing}";
-	transition: ~"filter @{timing}, -moz-filter @{timing}, -o-filter @{timing}, -ms-filter @{timing}, -webkit-filter @{timing}";
-}
-
-.percentage-sizes(@filter) {
-	&.insta-none {.filter-maker(~"@{filter}(@{none})");}
-	&.insta-small {.filter-maker(~"@{filter}(@{small-px})");}
-	&.insta-medium {.filter-maker(~"@{filter}(@{medium-px})");}
-	&.insta-large {.filter-maker(~"@{filter}(@{large-px})");}
-	&.insta-mega {.filter-maker(~"@{filter}(@{mega-px})");}
-}
-
-.timing(@filter) {
-	&.insta-reallyfast {.timing-maker(@reallyfast);}
-	&.insta-fast {.timing-maker(@fast);}
-	&.insta-slow {.timing-maker(@slow);}
-	&.insta-lazy {.timing-maker(@lazy);}
-}
-
-
-.basic-property-builder(@filter, @property-name) {
+.basic-property-builder(@filter, @property-name, @unit) {
 	.insta-@{property-name} {
-		.filter-maker(~"@{filter}(@{medium-px})");
-		.percentage-sizes(@filter);
+		.filter-maker(~"@{filter}(@{medium-@{unit}})");
+		.generate-sizing-rules(@filter, @unit);
 		&.insta-hover {
 			.filter-maker(~"@{filter}(@{none})");
 			&:hover {
-				.filter-maker(~"@{filter}(@{medium-px})");
-				.percentage-sizes(@filter);
+				.filter-maker(~"@{filter}(@{medium-@{unit}})");
+				.generate-sizing-rules(@filter, @unit);
 			}
 		}
-		.timing(@filter);
+		.generate-timing-rules(@filter);
 		&.insta-unhover:hover {
 			.filter-maker(~"@{filter}(@{none})");
 		}
 	}
 }
 
+.split-property-builder(@filter, @additive-property-name, @subtractive-property-name, @unit) {
+	.insta-@{additive-property-name} {
+		.filter-maker(~"@{filter}(@{add-medium-@{unit}})");
+		.generate-sizing-rules(@filter, @unit, additive);
+		&.insta-hover {
+			.filter-maker(~"@{filter}(@{none})");
+			&:hover {
+				.filter-maker(~"@{filter}(@{add-medium-@{unit}})");
+				.generate-sizing-rules(@filter, @unit, additive);
+			}
+		}
+		.generate-timing-rules(@filter);
+		&.insta-unhover:hover {
+			.filter-maker(~"@{filter}(@{none})");
+		}
+	}
+	.insta-@{subtractive-property-name} {
+		.filter-maker(~"@{filter}(@{sub-medium-@{unit}})");
+		.generate-sizing-rules(@filter, @unit, subtractive);
+		&.insta-hover {
+			.filter-maker(~"@{filter}(@{none})");
+			&:hover {
+				.filter-maker(~"@{filter}(@{sub-medium-@{unit}})");
+				.generate-sizing-rules(@filter, @unit, subtractive);
+			}
+		}
+		.generate-timing-rules(@filter);
+		&.insta-unhover:hover {
+			.filter-maker(~"@{filter}(@{none})");
+		}
+	}
+}
 
-.basic-property-builder(blur, blur);
-
-// .insta-blur {
-// 	.filter-maker(blur(@medium-px));
-// 	.percentage-sizes(blur);
-// 	&.insta-hover {
-// 		.filter-maker(blur(@none));
-// 		&:hover {
-// 			.filter-maker(blur(@medium-px));
-// 			.percentage-sizes(blur);
-// 		}
-// 	}
-// 	.timing(blur);
-// }
-
-// .insta-blur {
-// 	-webkit-filter: blur(@medium-px);
-// 	filter: blur(@medium-px);
-// }
-
-// .insta-brighten {
-// 	-webkit-filter: brightness(100+@medium-percentage);
-// 	filter: brightness(100+@medium-percentage);
-// }
-
-
-
-// .insta-blur {
-// 	-webkit-filter: blur(@medium-px);
-// 	filter: blur(@medium-px);
-
-// }
+.basic-property-builder(blur, blur, px);
+.split-property-builder(brightness, brighten, darken, percent);
