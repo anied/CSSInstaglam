@@ -1,0 +1,50 @@
+.basic-property-builder(@filter, @property-name, @unit) {
+	.insta-@{property-name} {
+		.filter-maker(~"@{filter}(@{medium-@{unit}})");
+		.generate-sizing-rules(@filter, @unit);
+		&.insta-hover {
+			.filter-maker(~"@{filter}(@{none})");
+			&:hover {
+				.filter-maker(~"@{filter}(@{medium-@{unit}})");
+				.generate-sizing-rules(@filter, @unit);
+			}
+		}
+		.generate-timing-rules(@filter);
+		&.insta-unhover:hover {
+			.filter-maker(~"@{filter}(@{none})");
+		}
+	}
+}
+
+.split-property-builder(@filter, @additive-property-name, @subtractive-property-name, @unit) {
+	.insta-@{additive-property-name} {
+		.filter-maker(~"@{filter}(@{add-medium-@{unit}})");
+		.generate-sizing-rules(@filter, @unit, additive);
+		&.insta-hover {
+			.filter-maker(~"@{filter}(@{split-none})");
+			&:hover {
+				.filter-maker(~"@{filter}(@{add-medium-@{unit}})");
+				.generate-sizing-rules(@filter, @unit, additive);
+			}
+		}
+		.generate-timing-rules(@filter);
+		&.insta-unhover:hover {
+			.filter-maker(~"@{filter}(@{split-none})");
+		}
+	}
+	.insta-@{subtractive-property-name} {
+		.filter-maker(~"@{filter}(@{sub-medium-@{unit}})");
+		.generate-sizing-rules(@filter, @unit, subtractive);
+		&.insta-hover {
+			.filter-maker(~"@{filter}(@{split-none})");
+			&:hover {
+				.filter-maker(~"@{filter}(@{sub-medium-@{unit}})");
+				.generate-sizing-rules(@filter, @unit, subtractive);
+			}
+		}
+		.generate-timing-rules(@filter);
+		&.insta-unhover:hover {
+			.filter-maker(~"@{filter}(@{split-none})");
+		}
+	}
+}

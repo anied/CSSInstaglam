@@ -23,7 +23,7 @@
 }
 
 .generate-sizing-rules(@filter, @unit, @type-flag: none) when (@type-flag = additive) {
-	&.insta-none {.filter-maker(~"@{filter}(@{none})");}
+	&.insta-none {.filter-maker(~"@{filter}(@{split-none})");}
 	&.insta-small {.filter-maker(~"@{filter}(@{add-small-@{unit}})");}
 	&.insta-medium {.filter-maker(~"@{filter}(@{add-medium-@{unit}})");}
 	&.insta-large {.filter-maker(~"@{filter}(@{add-large-@{unit}})");}
@@ -31,7 +31,7 @@
 }
 
 .generate-sizing-rules(@filter, @unit, @type-flag: none) when (@type-flag = subtractive) {
-	&.insta-none {.filter-maker(~"@{filter}(@{none})");}
+	&.insta-none {.filter-maker(~"@{filter}(@{split-none})");}
 	&.insta-small {.filter-maker(~"@{filter}(@{sub-small-@{unit}})");}
 	&.insta-medium {.filter-maker(~"@{filter}(@{sub-medium-@{unit}})");}
 	&.insta-large {.filter-maker(~"@{filter}(@{sub-large-@{unit}})");}
