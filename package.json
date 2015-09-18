@@ -1,18 +1,18 @@
 {
-  "name": "stupid_simple_project_shell",
-  "version": "0.0.0",
-  "description": "Fastest way to get a locally hosted webserver up and running for development on a project.  Follow instructions in the readme.  Must have Node/NPM installed.",
+  "name": "CSSInstaglam",
+  "version": "0.5.0",
+  "description": "Easy abstraction layer using CSS classes to leverage filter and filter animations to your site.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node node_modules/.bin/http-server src"
   },
   "keywords": [
-    "prototype",
-    "shell",
-    "template",
-    "http-server",
-    "local",
-    "development"
+    "CSS",
+    "filter",
+    "transition",
+    "animation",
+    "effects",
+    "design"
   ],
   "author": "Alexander Nied",
   "license": "None",
@@ -20,6 +20,10 @@
     "http-server": "~0.8.0",
     "grunt": "~0.4.5",
     "grunt-contrib-less": "~1.0.1",
-    "grunt-contrib-watch": "~0.6.1"
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-copy": "~0.8.1",
+    "grunt-contrib-cssmin": "~0.14.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-string-replace": "~1.2.0"
   }
 }
