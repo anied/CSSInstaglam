@@ -16,6 +16,24 @@
 	}
 }
 
+.inverted-property-builder(@filter, @property-name, @unit) {
+	.insta-@{property-name} {
+		.filter-maker(~"@{filter}(@{sub-medium-@{unit}})");
+		.generate-sizing-rules(@filter, @unit, subtractive);
+		&.insta-hover {
+			.filter-maker(~"@{filter}(@{split-none})");
+			&:hover {
+				.filter-maker(~"@{filter}(@{sub-medium-@{unit}})");
+				.generate-sizing-rules(@filter, @unit, subtractive);
+			}
+		}
+		.generate-timing-rules(@filter);
+		&.insta-unhover:hover {
+			.filter-maker(~"@{filter}(@{split-none})");
+		}
+	}
+}
+
 .split-property-builder(@filter, @additive-property-name, @subtractive-property-name, @unit) {
 	.insta-@{additive-property-name} {
 		.filter-maker(~"@{filter}(@{add-medium-@{unit}})");

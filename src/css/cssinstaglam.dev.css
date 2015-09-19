@@ -882,95 +882,95 @@
   filter: invert(0);
 }
 .insta-opacity {
-  -moz-filter: opacity(40%);
-  -webkit-filter: opacity(40%);
-  -o-filter: opacity(40%);
-  -ms-filter: opacity(40%);
-  filter: opacity(40%);
+  -moz-filter: opacity(60%);
+  -webkit-filter: opacity(60%);
+  -o-filter: opacity(60%);
+  -ms-filter: opacity(60%);
+  filter: opacity(60%);
 }
 .insta-opacity.insta-none {
-  -moz-filter: opacity(0);
-  -webkit-filter: opacity(0);
-  -o-filter: opacity(0);
-  -ms-filter: opacity(0);
-  filter: opacity(0);
+  -moz-filter: opacity(100%);
+  -webkit-filter: opacity(100%);
+  -o-filter: opacity(100%);
+  -ms-filter: opacity(100%);
+  filter: opacity(100%);
 }
 .insta-opacity.insta-small {
-  -moz-filter: opacity(10%);
-  -webkit-filter: opacity(10%);
-  -o-filter: opacity(10%);
-  -ms-filter: opacity(10%);
-  filter: opacity(10%);
+  -moz-filter: opacity(90%);
+  -webkit-filter: opacity(90%);
+  -o-filter: opacity(90%);
+  -ms-filter: opacity(90%);
+  filter: opacity(90%);
 }
 .insta-opacity.insta-medium {
-  -moz-filter: opacity(40%);
-  -webkit-filter: opacity(40%);
-  -o-filter: opacity(40%);
-  -ms-filter: opacity(40%);
-  filter: opacity(40%);
+  -moz-filter: opacity(60%);
+  -webkit-filter: opacity(60%);
+  -o-filter: opacity(60%);
+  -ms-filter: opacity(60%);
+  filter: opacity(60%);
 }
 .insta-opacity.insta-large {
-  -moz-filter: opacity(80%);
-  -webkit-filter: opacity(80%);
-  -o-filter: opacity(80%);
-  -ms-filter: opacity(80%);
-  filter: opacity(80%);
+  -moz-filter: opacity(20%);
+  -webkit-filter: opacity(20%);
+  -o-filter: opacity(20%);
+  -ms-filter: opacity(20%);
+  filter: opacity(20%);
 }
 .insta-opacity.insta-mega {
-  -moz-filter: opacity(100%);
-  -webkit-filter: opacity(100%);
-  -o-filter: opacity(100%);
-  -ms-filter: opacity(100%);
-  filter: opacity(100%);
+  -moz-filter: opacity(0%);
+  -webkit-filter: opacity(0%);
+  -o-filter: opacity(0%);
+  -ms-filter: opacity(0%);
+  filter: opacity(0%);
 }
 .insta-opacity.insta-hover {
-  -moz-filter: opacity(0);
-  -webkit-filter: opacity(0);
-  -o-filter: opacity(0);
-  -ms-filter: opacity(0);
-  filter: opacity(0);
-}
-.insta-opacity.insta-hover:hover {
-  -moz-filter: opacity(40%);
-  -webkit-filter: opacity(40%);
-  -o-filter: opacity(40%);
-  -ms-filter: opacity(40%);
-  filter: opacity(40%);
-}
-.insta-opacity.insta-hover:hover.insta-none {
-  -moz-filter: opacity(0);
-  -webkit-filter: opacity(0);
-  -o-filter: opacity(0);
-  -ms-filter: opacity(0);
-  filter: opacity(0);
-}
-.insta-opacity.insta-hover:hover.insta-small {
-  -moz-filter: opacity(10%);
-  -webkit-filter: opacity(10%);
-  -o-filter: opacity(10%);
-  -ms-filter: opacity(10%);
-  filter: opacity(10%);
-}
-.insta-opacity.insta-hover:hover.insta-medium {
-  -moz-filter: opacity(40%);
-  -webkit-filter: opacity(40%);
-  -o-filter: opacity(40%);
-  -ms-filter: opacity(40%);
-  filter: opacity(40%);
-}
-.insta-opacity.insta-hover:hover.insta-large {
-  -moz-filter: opacity(80%);
-  -webkit-filter: opacity(80%);
-  -o-filter: opacity(80%);
-  -ms-filter: opacity(80%);
-  filter: opacity(80%);
-}
-.insta-opacity.insta-hover:hover.insta-mega {
   -moz-filter: opacity(100%);
   -webkit-filter: opacity(100%);
   -o-filter: opacity(100%);
   -ms-filter: opacity(100%);
   filter: opacity(100%);
+}
+.insta-opacity.insta-hover:hover {
+  -moz-filter: opacity(60%);
+  -webkit-filter: opacity(60%);
+  -o-filter: opacity(60%);
+  -ms-filter: opacity(60%);
+  filter: opacity(60%);
+}
+.insta-opacity.insta-hover:hover.insta-none {
+  -moz-filter: opacity(100%);
+  -webkit-filter: opacity(100%);
+  -o-filter: opacity(100%);
+  -ms-filter: opacity(100%);
+  filter: opacity(100%);
+}
+.insta-opacity.insta-hover:hover.insta-small {
+  -moz-filter: opacity(90%);
+  -webkit-filter: opacity(90%);
+  -o-filter: opacity(90%);
+  -ms-filter: opacity(90%);
+  filter: opacity(90%);
+}
+.insta-opacity.insta-hover:hover.insta-medium {
+  -moz-filter: opacity(60%);
+  -webkit-filter: opacity(60%);
+  -o-filter: opacity(60%);
+  -ms-filter: opacity(60%);
+  filter: opacity(60%);
+}
+.insta-opacity.insta-hover:hover.insta-large {
+  -moz-filter: opacity(20%);
+  -webkit-filter: opacity(20%);
+  -o-filter: opacity(20%);
+  -ms-filter: opacity(20%);
+  filter: opacity(20%);
+}
+.insta-opacity.insta-hover:hover.insta-mega {
+  -moz-filter: opacity(0%);
+  -webkit-filter: opacity(0%);
+  -o-filter: opacity(0%);
+  -ms-filter: opacity(0%);
+  filter: opacity(0%);
 }
 .insta-opacity.insta-reallyfast {
   -moz-transition: -moz-filter 0.5s, filter 0.5s;
@@ -1001,11 +1001,11 @@
   transition: filter 4s, -moz-filter 4s, -o-filter 4s, -ms-filter 4s, -webkit-filter 4s;
 }
 .insta-opacity.insta-unhover:hover {
-  -moz-filter: opacity(0);
-  -webkit-filter: opacity(0);
-  -o-filter: opacity(0);
-  -ms-filter: opacity(0);
-  filter: opacity(0);
+  -moz-filter: opacity(100%);
+  -webkit-filter: opacity(100%);
+  -o-filter: opacity(100%);
+  -ms-filter: opacity(100%);
+  filter: opacity(100%);
 }
 .insta-saturate {
   -moz-filter: saturate(140%);
