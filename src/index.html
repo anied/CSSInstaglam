@@ -2,8 +2,20 @@
 <html>
 <head>
 	<title>CSSInstaglam</title>
-	<link rel="stylesheet" href="css/cssinstglam.dev.css">
+	<link rel="stylesheet" href="css/cssinstaglam.dev.css">
 	<style>
+		body {
+			background: url('img/ps_neutral.png') repeat;
+		}
+		h1 {
+			margin-top: 30px;
+			text-align: center;
+		}
+		h2 {
+			font-weight: bold;
+			color: #FFF;
+			background-color: #666;
+		}
 		.mini-title {
 			font-weight: bold;
 		}
@@ -18,57 +30,439 @@
 		.example-img {
 			 vertical-align: middle;
 		}
+		.example-card {
+		    width: 260px;
+		    display: inline-block;
+		    padding-left: 15px;
+		    padding-right: 15px;
+		    border-right: #DDD dotted 1px;
+		}
+
+		.example {
+		    margin-top: 30px;
+		    margin-bottom: 30px;
+		    text-align: center;
+		}
 	</style>
 </head>
 <body>
 	<!-- p.example-row>(span.mini-title{mytitle}+{&nbsp;&nbsp;}+span.insta-{<img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/>}) -->
 	<!-- p.example-row>(span.mini-title{mytitle}+{&nbsp;&nbsp;}+div.insta-{<img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/>p{RAKETEN-LUFTSCHIFF!}}) -->
-	<h1>CSSInstaGlam Test Sheet</h1>
+	<!-- div.example-card>(p.mini-title{FX}+div.example.insta-FX>({<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>}+p.example-text{ROCKETBLIMP!})) -->
+	<h1>CSSInstaglam Test Sheet</h1>
 	<h2>Basics:</h2>
-	<p class="example-row">
-		<span class="mini-title">Basic Blur:</span>&nbsp;&nbsp;
-		<div class="insta-blur">
-			<img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/>
-			<p>RAKETEN-LUFTSCHIFF!</p>
+	<div class="example-card">
+		<p class="mini-title">Blur</p>
+		<div class="example insta-blur">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
 		</div>
-	</p>
-	<p class="example-row">
-		<span class="mini-title">Basic Brighten</span>&nbsp;&nbsp;
-		<div class="insta-brighten"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/><p>RAKETEN-LUFTSCHIFF!</p></div>
-	</p>
-	<p class="example-row">
-		<span class="mini-title">Basic Darken</span>&nbsp;&nbsp;
-		<div class="insta-darken"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/><p>RAKETEN-LUFTSCHIFF!</p></div>
-	</p>
-	<h2>insta-hover:</h2>
-	<p class="example-row">
-		<span class="mini-title">Blur on Hover:</span>&nbsp;&nbsp;<span class="insta-blur insta-hover"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
-	</p>
-	<p class="example-row">
-		<span class="mini-title">Blur Mega on Hover:</span>&nbsp;&nbsp;<span class="insta-blur insta-hover insta-mega"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
-	</p>
-	<h2>Animations</h2>
-	<p class="example-row">
-		<span class="mini-title">Blur on Hover Slow:</span>&nbsp;&nbsp;<span class="insta-blur insta-slow insta-hover"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
-	</p>
-	<p class="example-row">
-		<span class="mini-title">Blur on Hover Fast</span>&nbsp;&nbsp;<span class="insta-blur insta-fast insta-hover"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
-	</p>
-	<p class="example-row">
-		<span class="mini-title">Brighten on Hover Fast</span>&nbsp;&nbsp;<span class="insta-brighten insta-fast insta-hover"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
-	</p>
-	<p class="example-row">
-		<span class="mini-title">Darken on Hover Slow</span>&nbsp;&nbsp;<span class="insta-darken insta-slow insta-hover"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
-	</p>
-	<p class="example-row"><span class="mini-title">Unhover</span>&nbsp;&nbsp;<span class="insta-blur insta-unhover insta-reallyfast"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span></p>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Brighten</p>
+		<div class="example insta-brighten"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Darken</p>
+		<div class="example insta-darken"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Contrast</p>
+		<div class="example insta-contrast"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Decontrast</p>
+		<div class="example insta-decontrast"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Grayscale</p>
+		<div class="example insta-grayscale"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Invert</p>
+		<div class="example insta-invert"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Opacity</p>
+		<div class="example insta-opacity"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Saturate</p>
+		<div class="example insta-saturate"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Desaturate</p>
+		<div class="example insta-desaturate"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Sepia</p>
+		<div class="example insta-sepia"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+
+	<h2>FX at 100%:</h2>
+	<div class="example-card">
+		<p class="mini-title">Blur</p>
+		<div class="example insta-blur insta-mega">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Brighten</p>
+		<div class="example insta-brighten insta-mega"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Darken</p>
+		<div class="example insta-darken insta-mega"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Contrast</p>
+		<div class="example insta-contrast insta-mega"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Decontrast</p>
+		<div class="example insta-decontrast insta-mega"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Grayscale</p>
+		<div class="example insta-grayscale insta-mega"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Invert</p>
+		<div class="example insta-invert insta-mega"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Opacity</p>
+		<div class="example insta-opacity insta-mega"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Saturate</p>
+		<div class="example insta-saturate insta-mega"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Desaturate</p>
+		<div class="example insta-desaturate insta-mega"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Sepia</p>
+		<div class="example insta-sepia insta-mega"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+
+	<h2>FX at none:</h2>
+	<div class="example-card">
+		<p class="mini-title">Blur</p>
+		<div class="example insta-blur insta-none">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Brighten</p>
+		<div class="example insta-brighten insta-none"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Darken</p>
+		<div class="example insta-darken insta-none"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Contrast</p>
+		<div class="example insta-contrast insta-none"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Decontrast</p>
+		<div class="example insta-decontrast insta-none"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Grayscale</p>
+		<div class="example insta-grayscale insta-none"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Invert</p>
+		<div class="example insta-invert insta-none"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Opacity</p>
+		<div class="example insta-opacity insta-none"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Saturate</p>
+		<div class="example insta-saturate insta-none"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Desaturate</p>
+		<div class="example insta-desaturate insta-none"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Sepia</p>
+		<div class="example insta-sepia insta-none"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+
+	<h2>Hover:</h2>
+	<div class="example-card">
+		<p class="mini-title">Blur</p>
+		<div class="example insta-blur insta-hover">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Brighten</p>
+		<div class="example insta-brighten insta-hover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Darken</p>
+		<div class="example insta-darken insta-hover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Contrast</p>
+		<div class="example insta-contrast insta-hover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Decontrast</p>
+		<div class="example insta-decontrast insta-hover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Grayscale</p>
+		<div class="example insta-grayscale insta-hover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Invert</p>
+		<div class="example insta-invert insta-hover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Opacity</p>
+		<div class="example insta-opacity insta-hover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Saturate</p>
+		<div class="example insta-saturate insta-hover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Desaturate</p>
+		<div class="example insta-desaturate insta-hover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Sepia</p>
+		<div class="example insta-sepia insta-hover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	
+	<h2>Unhover:</h2>
+	<div class="example-card">
+		<p class="mini-title">Blur</p>
+		<div class="example insta-blur insta-unhover">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Brighten</p>
+		<div class="example insta-brighten insta-unhover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Darken</p>
+		<div class="example insta-darken insta-unhover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Contrast</p>
+		<div class="example insta-contrast insta-unhover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Decontrast</p>
+		<div class="example insta-decontrast insta-unhover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Grayscale</p>
+		<div class="example insta-grayscale insta-unhover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Invert</p>
+		<div class="example insta-invert insta-unhover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Opacity</p>
+		<div class="example insta-opacity insta-unhover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Saturate</p>
+		<div class="example insta-saturate insta-unhover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Desaturate</p>
+		<div class="example insta-desaturate insta-unhover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Sepia</p>
+		<div class="example insta-sepia insta-unhover"><img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+
 	<h2>FX Amount:</h2>
-	<p class="example-row">
-		<span class="mini-title">Mega Blur:</span>&nbsp;&nbsp;<span class="insta-blur insta-mega"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
-	</p>
-	<p class="example-row">
-		<span class="mini-title">No Blur:</span>&nbsp;&nbsp;<span class="insta-blur insta-none"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span>
-	</p>
-	<h2>Combos:</h2>
+	<div class="example-card">
+		<p class="mini-title">Blur: *insta-none*</p>
+		<div class="example insta-blur insta-none">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Blur: *insta-small*</p>
+		<div class="example insta-blur insta-small">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Blur: *insta-medium*</p>
+		<div class="example insta-blur insta-medium">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Blur: *insta-large*</p>
+		<div class="example insta-blur insta-large">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Blur: *insta-mega*</p>
+		<div class="example insta-blur insta-mega">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	
+	<h2>Animations (Using mega):</h2>
+	<div class="example-card">
+		<p class="mini-title">Blur: *insta-reallyfast*</p>
+		<div class="example insta-blur insta-hover insta-mega insta-reallyfast">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Blur: *insta-fast*</p>
+		<div class="example insta-blur insta-hover insta-mega insta-fast">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Blur: *insta-slow*</p>
+		<div class="example insta-blur insta-hover insta-mega insta-slow">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+	<div class="example-card">
+		<p class="mini-title">Blur: *insta-lazy*</p>
+		<div class="example insta-blur insta-hover insta-mega insta-lazy">
+			<img width="212.8" height="70" class="example-img" src="img/rocket_blimp_launch.png"/>
+			<p class="example-text">ROCKETBLIMP!</p>
+		</div>
+	</div>
+
+	<h2>Combos examples:</h2>
 	<p class="example-row">
 		<span class="mini-title">Awaken</span>&nbsp;&nbsp;<span class="insta-grayscale insta-mega insta-fast insta-unhover"><span class="insta-blur insta-mega insta-unhover insta-slow"><img width="266" height="87.5" class="example-img" src="img/rocket_blimp_launch.png"/></span></span>
 	</p>
