@@ -103,6 +103,11 @@ Here are a few of the features that are slated for further research and developm
  + Implementation of `hue` filter
  + Implementation of `drop-shadow` filter
  + Sass version of the library
+ + More nuanced intensity controls
+ + Class-controlled timing functions
 
 ## Comments and Suggestions
 If you have tweaks or suggestions or issues for **CSSInstaglam**, please feel free to leave comments or log issues here on the repo page.  Thanks!
+
+##License
+MIT
