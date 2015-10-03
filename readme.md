@@ -3,11 +3,11 @@
 **CSSInstaglam** is a CSS library (compiled from LESS) that creates a simple API for using and animating CSS filter effects in your projects.
 
 ##Demo
-A demo page is pending-- meanwhile, you can clone the repo and look at the demo inside of the `src` directory.  See the "[Development](#development)" section below.
+You can see the CSSInstaglam live demo <a href="http://www.alexnied.com/cssinstaglam/" target="_blank">here</a>. Additionally, you can clone the repo and look at the demo inside of the `src` directory.  See the "[Development](#development)" section below.
 
 ##Adding CSSInstaglam to your project
 
-(Installation via Bower is pending.)
+**(Installation via Bower is pending.)**
 
 From the repo, you can either download `dist/cssinstaglam.css` or the minified `dist/cssinstaglam.min.css`.  If you wish to compile the LESS files yourself in the project, you can grab all the files inside of the `src/less` directory.  Then include the file in your project in whatever way your prefer-- the simplest ways will be either via a HTML `link` element, or a CSS `@import` statment.
 
