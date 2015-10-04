@@ -4,7 +4,7 @@
   "description": "Easy abstraction layer using CSS classes to leverage filter and filter animations to your site.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node node_modules/.bin/http-server src"
+    "start": "http-server src"
   },
   "keywords": [
     "CSS",
@@ -17,7 +17,6 @@
   "author": "Alexander Nied",
   "license": "None",
   "devDependencies": {
-    "http-server": "~0.8.0",
     "grunt": "~0.4.5",
     "grunt-contrib-less": "~1.0.1",
     "grunt-contrib-watch": "~0.6.1",
