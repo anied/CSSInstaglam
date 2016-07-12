@@ -1,0 +1,26 @@
+{
+  "name": "CSSInstaglam",
+  "description": "Easy abstraction layer using CSS classes to leverage filter and filter animations to your site.",
+  "main": "",
+  "authors": [
+    "Alexander Nied"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "CSS",
+    "filter",
+    "transition",
+    "animation",
+    "effects",
+    "design"
+  ],
+  "homepage": "https://github.com/anied/CSSInstaglam",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

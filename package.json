@@ -1,6 +1,5 @@
 {
   "name": "CSSInstaglam",
-  "version": "0.5.0",
   "description": "Easy abstraction layer using CSS classes to leverage filter and filter animations to your site.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
