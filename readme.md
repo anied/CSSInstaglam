@@ -7,9 +7,13 @@ You can see the CSSInstaglam live demo <a href="http://www.alexnied.com/cssinsta
 
 ##Adding CSSInstaglam to your project
 
-**(Installation via Bower is pending.)**
+**CSSInstaglam** can be installed using bower:
 
-From the repo, you can either download `dist/cssinstaglam.css` or the minified `dist/cssinstaglam.min.css`.  If you wish to compile the LESS files yourself in the project, you can grab all the files inside of the `src/less` directory.  Then include the file in your project in whatever way your prefer-- the simplest ways will be either via a HTML `link` element, or a CSS `@import` statment.
+```sh
+$ bower install css-instaglam --save
+```
+
+From the package, you can use either  `dist/cssinstaglam.css` or the minified `dist/cssinstaglam.min.css`.  If you wish to compile the LESS files yourself in the project, you can grab all the files inside of the `src/less` directory.  Then include the file in your project in whatever way your prefer-- the simplest ways will be either via a HTML `link` element, or a CSS `@import` statment.
 
 _HTML link element:_
 ```html
