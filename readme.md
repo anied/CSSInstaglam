@@ -1,11 +1,11 @@
-#CSSInstaglam
+# CSSInstaglam
 
 **CSSInstaglam** is a CSS library (compiled from LESS) that creates a simple API for using and animating CSS filter effects in your projects.
 
-##Demo
+## Demo
 You can see the CSSInstaglam live demo <a href="http://www.alexnied.com/cssinstaglam/" target="_blank">here</a>. Additionally, you can clone the repo and look at the demo inside of the `src` directory.  See the "[Development](#development)" section below.
 
-##Adding CSSInstaglam to your project
+## Adding CSSInstaglam to your project
 
 **CSSInstaglam** can be installed using bower:
 
@@ -24,7 +24,7 @@ _HTML link element_
 @import url("{PATH_TO_YOUR_CSS_ASSETS}/cssinstaglam.min.css");
 ```
 
-##Using CSSInstaglam
+## Using CSSInstaglam
 CSSInstaglam works by providing classes that correlate to CSS filters, as well as some syntactic sugar for handling hover states, intensity of effect and animation of the effect.
 
 ### FX Classes
@@ -101,7 +101,7 @@ If you want to get involved directly in development, you can fork and/or clone t
  + `npm start` - this will start a server for local development (check the terminal for the port)
 You can then work in the LESS files, and test changes in `index.html`.
 
-###Pending Features
+### Pending Features
 Here are a few of the features that are slated for further research and development:
  + Internet Explorer support
  + Implementation of `hue` filter
@@ -113,5 +113,5 @@ Here are a few of the features that are slated for further research and developm
 ## Comments and Suggestions
 If you have tweaks or suggestions or issues for **CSSInstaglam**, please feel free to leave comments or log issues here on the repo page.  Thanks!
 
-##License
+## License
 MIT
