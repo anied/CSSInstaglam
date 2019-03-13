@@ -1,10 +1,28 @@
 {
-  "name": "CSSInstaglam",
+  "name": "css-instaglam",
   "description": "Easy abstraction layer using CSS classes to leverage filter and filter animations to your site.",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server src"
+  "repository": "https://github.com/anied/CSSInstaglam",
+  "author": "Alexander Nied <alex.nied@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-copy": "~0.8.1",
+    "grunt-contrib-cssmin": "~0.14.0",
+    "grunt-contrib-less": "~1.0.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-string-replace": "~1.2.0",
+    "http-server": "^0.11.1"
   },
+  "scripts": {
+    "build": "npx grunt build",
+    "start": "http-server src",
+    "preversion": "npm run build",
+    "version": "npm run build && git add dist/.",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {},
   "keywords": [
     "CSS",
     "filter",
@@ -12,16 +30,5 @@
     "animation",
     "effects",
     "design"
-  ],
-  "author": "Alexander Nied",
-  "license": "None",
-  "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-less": "~1.0.1",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-copy": "~0.8.1",
-    "grunt-contrib-cssmin": "~0.14.0",
-    "grunt-contrib-clean": "~0.6.0",
-    "grunt-string-replace": "~1.2.0"
-  }
+  ]
 }
