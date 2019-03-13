@@ -2,6 +2,7 @@
   "name": "css-instaglam",
   "description": "Easy abstraction layer using CSS classes to leverage filter and filter animations to your site.",
   "repository": "https://github.com/anied/CSSInstaglam",
+  "homepage": "https://www.alexnied.com/cssinstaglam/",
   "author": "Alexander Nied <alex.nied@gmail.com>",
   "license": "MIT",
   "private": false,

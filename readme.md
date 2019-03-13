@@ -7,7 +7,13 @@ You can see the CSSInstaglam live demo <a href="http://www.alexnied.com/cssinsta
 
 ## Adding CSSInstaglam to your project
 
-**CSSInstaglam** can be installed using bower:
+**CSSInstaglam** can be installed using npm:
+
+```sh
+$ npm install css-instaglam --save
+```
+
+There is also legacy support for [`Bower`](https://bower.io/), but it is not being actively maintained for this project:
 
 ```sh
 $ bower install css-instaglam --save
